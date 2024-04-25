@@ -38,7 +38,8 @@ public class PlayerExample : BasePlayerController, IAimable, IMoveable, IAttacka
     {
 
         if(direction != Vector2.zero){
-            myRigidBody.velocity = direction * velocity;
+            Vector3 tmo = new Vector3(direction.x, 0, direction.y);
+            myRigidBody.velocity = tmo * velocity;
         }
         else
         {
