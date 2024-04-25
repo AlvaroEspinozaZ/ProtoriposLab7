@@ -36,7 +36,7 @@ public class InputHandler : MonoBehaviour
     public void OnAttack(InputAction.CallbackContext context)
     {
         //Debug.Log(context.phase);
-
+        if(context.started)
         _characterAttack.Attack(_characterAim.Position);
     }
 }
